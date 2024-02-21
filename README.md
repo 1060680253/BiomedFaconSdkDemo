@@ -1,4 +1,5 @@
-一.根目录下build.gradle：
+一.根目录下build.gradle
+
     allprojects {
         repositories {
             maven {
@@ -40,10 +41,12 @@
 
 
 四.混淆规则
+
     -dontwarn com.biomed.facon.ftc.sdk.**
     -keep class com.biomed.facon.ftc.sdk.** { *; }
 
 五.报告json字段说明
+
 ![img.png](img.png)
 ![img_1.png](img_1.png)
 ![img_2.png](img_2.png)
