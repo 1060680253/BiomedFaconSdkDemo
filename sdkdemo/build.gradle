@@ -1,0 +1,97 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    compileSdkVersion 31
+
+    defaultConfig {
+        applicationId "com.biomed.facon.ftc.demo"
+        minSdkVersion 24
+        targetSdkVersion 31
+        versionCode 1
+        versionName "1.0.0"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            zipAlignEnabled true
+            shrinkResources true
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/library_release.kotlin_module'
+    }
+
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+    mavenCentral()
+}
+
+dependencies {
+
+    implementation fileTree(include: '*.jar', dir: 'libs')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    implementation "androidx.multidex:multidex:2.0.1"
+
+    implementation "com.biomed.facon.ftc:biomedFaconLibrary-Test:1.0.0"
+
+//    implementation(name: 'biomedfaconlibrary-release', ext: 'aar')
+//    implementation project(':biomedfaconlibrary')
+//
+//    api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.50'
+//    api 'com.lzy.net:okgo:3.0.4'
+//    api 'com.github.bumptech.glide:glide:4.9.0'
+//    api 'com.github.li-xiaojun:XPopup:2.9.19'
+//    api 'com.google.code.gson:gson:2.9.1'
+//    api 'me.grantland:autofittextview:0.2.1'
+//    api 'io.reactivex.rxjava2:rxandroid:2.1.1'
+//    api  'io.github.scwang90:refresh-layout-kernel:2.0.5'
+//    api  'io.github.scwang90:refresh-header-classics:2.0.5'
+//    api  'io.github.scwang90:refresh-footer-classics:2.0.5'
+//    api 'com.github.getActivity:ToastUtils:10.3'
+//    api 'org.greenrobot:eventbus:3.2.0'
+//    api 'com.github.lygttpod:SuperTextView:2.4.6'
+//    api 'com.aliyun.dpa:oss-android-sdk:+'
+//    api 'com.github.jenly1314:zxing-lite:2.2.1'
+//    api 'com.github.gzu-liyujiang.AndroidPicker:Common:4.1.11'
+//    api 'com.github.gzu-liyujiang.AndroidPicker:WheelView:4.1.11'
+//    api 'com.github.gzu-liyujiang.AndroidPicker:WheelPicker:4.1.11'
+//    api 'com.airbnb.android:lottie:6.0.0'
+//    api 'com.zzhoujay.richtext:richtext:3.0.8'
+//    api 'com.zzhoujay:html:1.0.2'
+//    api 'com.geyifeng.immersionbar:immersionbar:3.2.2'
+//    api 'com.github.getActivity:XXPermissions:18.5'
+//    api("androidx.exifinterface:exifinterface:1.3.3")
+//    api("androidx.lifecycle:lifecycle-common:2.3.1")
+//    api("com.google.android.gms:play-services-tasks:17.2.1")
+//    implementation("androidx.annotation:annotation:1.2.0")
+//    implementation("com.otaliastudios.opengl:egloo:0.6.1")
+}
