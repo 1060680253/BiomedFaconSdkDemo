@@ -19,7 +19,7 @@
 二.app下build.gradle：
 
     dependencies {
-        implementation "com.biomed.facon.ftc:biomedFaconLibrary-Test:1.0.0"
+        implementation "com.biomed.facon.ftc:biomedFaconLibrary-Test:1.0.1"
     }
 
 三.DetectionManager类的api方法说明
