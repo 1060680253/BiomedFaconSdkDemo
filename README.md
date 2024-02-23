@@ -36,8 +36,11 @@
     4.startDetect(context:Context,call:(String)->Unit):Boolean
         打开检测页面，带返回报告json内容 ；方法return的布尔值，true代表拉起成功，false代表拉起失败（原因：sdk初始化中，或者sdk初始化失败）
     
-    5.startDetect(context:Context)
-        打开检测页面，出结果之后直接跳转报告详情页面
+    5.startDetect(context:Context):Boolean
+        打开检测页面，出结果之后直接跳转报告详情页面；方法return的布尔值，true代表拉起成功，false代表拉起失败（原因：sdk初始化中，或者sdk初始化失败）
+
+    6.openReportDetailPage(context:Context,reportId:String)
+        通过报告id，打开报告详情页面
 
 
 四.混淆规则
