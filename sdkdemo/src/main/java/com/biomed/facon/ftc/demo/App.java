@@ -9,6 +9,6 @@ public class App extends MultiDexApplication {
     @Override
     public void onCreate() {
         super.onCreate();
-        DetectionManager.init(this,"duoge","YErFshQogf0kZhtY");
+        DetectionManager.init(this,"dev_z9a5wF6G","Tn9QFHABA2ieFptt");
     }
 }
