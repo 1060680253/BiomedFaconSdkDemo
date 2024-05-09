@@ -63,5 +63,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
     implementation "androidx.multidex:multidex:2.0.1"
 
-    implementation "com.biomed.facon.ftc:biomedFaconLibrary-Test:2.0.0"
+    implementation "com.biomed.facon.ftc:biomedFaconLibrary-Test:2.3.0"
 }
